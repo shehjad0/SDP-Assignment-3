@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static "style.css"%}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="row no-gutters hero-section">
+
+      <div class="col-md-6 p-4 d-flex justify-content-center">
+        <div>
+          <h1>Taste the Extraordinary</h1>
+          <p>Immerse yourself in a world of culinary delight where every bite tells a story</p>
+          <a href="{% url 'meal' %}" ><button class="btn btn-warning">Check</button></a>
+        </div>
+      </div>
+
+      <div class="col-md-6 image-side" style="background-image: url('{% static "home.jpg"%}');">
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
